@@ -16,6 +16,7 @@ import {
 } from '@react-navigation/drawer';
 import HomeScreen from './HomeScreen';
 import ServicesScreen from './ServicesScreen';
+import ContactScreen from './ContactScreen';
 
 const Drawer = createDrawerNavigator();
 
@@ -131,7 +132,7 @@ const ContactNavigator = () => {
         >
             <Stack.Screen
                 name='Contact'
-                component={ServicesScreen}
+                component={ContactScreen}
                 options={({ navigation }) => ({
                     title: 'Contact me',
                     headerLeft: () => (
@@ -241,7 +242,7 @@ const Main = () => {
                 />
                 <Drawer.Screen
                     name='Contact'
-                    component={ProjectsNavigator}
+                    component={ContactNavigator}
                     options={{
                         title: 'Contact me',
                         drawerIcon: ({ color }) => (
