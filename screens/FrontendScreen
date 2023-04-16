@@ -1,0 +1,5 @@
+const FrontendScreen = () => {
+
+};
+
+export default FrontendScreen;

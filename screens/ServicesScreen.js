@@ -1,5 +1,5 @@
 import { Card } from "react-native-elements";
-import { Text, ScrollView, StyleSheet } from "react-native";
+import { Text, ScrollView, StyleSheet, Image } from "react-native";
 import frontend from '../assets/img/frontend.png';
 import backend from '../assets/img/backend.png';
 import mobileapp from '../assets/img/mobileapp.png';
@@ -9,25 +9,25 @@ const ServicesScreen = () => {
     return (
         <ScrollView>
             <Card containerStyle={{ padding: 0 }}>
-                <Card.Image source={frontend} />
+                <Image source={frontend} style={styles.serviceImg} />
                 <Text style={styles.cardText}>
                     Front-End Development
                 </Text>
             </Card>
             <Card containerStyle={{ padding: 0 }}>
-                <Card.Image source={backend} />
+                <Image source={backend} style={styles.serviceImg} />
                 <Text style={styles.cardText}>
                     Back-End Development
                 </Text>
             </Card>
             <Card containerStyle={{ padding: 0 }}>
-                <Card.Image source={webdesign} />
+                <Image source={webdesign} style={styles.serviceImg} />
                 <Text style={styles.cardText}>
                     Web Designing
                 </Text>
             </Card>
             <Card containerStyle={{ padding: 0 }}>
-                <Card.Image source={mobileapp} />
+                <Image source={mobileapp} style={styles.serviceImg} />
                 <Text style={styles.cardText}>
                     Mobile Application
                 </Text>
@@ -37,13 +37,16 @@ const ServicesScreen = () => {
 };
 
 const styles = StyleSheet.create({
-    // cardImg: {
-    //     flex: 7
-    // },
-    cardText: {
-        margin: 20,
-        fontSize: 20,
+    serviceImg: {
+        width: 250,
+        height: 170,
         alignSelf: 'center'
+    },
+    cardText: {
+        margin: 10,
+        fontSize: 20,
+        alignSelf: 'center',
+        padding: 0
     }
 });
 

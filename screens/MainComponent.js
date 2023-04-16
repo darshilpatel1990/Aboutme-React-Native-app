@@ -17,6 +17,7 @@ import {
 import HomeScreen from './HomeScreen';
 import ServicesScreen from './ServicesScreen';
 import ContactScreen from './ContactScreen';
+import ProjectScreen from './ProjectScreen';
 
 const Drawer = createDrawerNavigator();
 
@@ -82,7 +83,7 @@ const ProjectsNavigator = () => {
         >
             <Stack.Screen
                 name='Projects'
-                component={ServicesScreen}
+                component={ProjectScreen}
                 options={({ navigation }) => ({
                     title: 'Projects',
                     headerLeft: () => (
@@ -99,7 +100,7 @@ const ProjectsNavigator = () => {
     );
 };
 
-const SkillssNavigator = () => {
+const SkillsNavigator = () => {
     const Stack = createStackNavigator();
     return (
         <Stack.Navigator
@@ -226,7 +227,7 @@ const Main = () => {
                 />
                 <Drawer.Screen
                     name='Skills'
-                    component={ProjectsNavigator}
+                    component={SkillsNavigator}
                     options={{
                         title: 'Skills',
                         drawerIcon: ({ color }) => (
